@@ -2,8 +2,9 @@ from functools import wraps
 import time
 import pandas as pd
 
-# dictionary of tasks tracing by FuncTimer
+# Dictionary of tasks tracing by FuncTimer
 tasklist = {}
+
 
 class FuncTask:
     """
@@ -30,6 +31,7 @@ class FuncTask:
         Get the average runtime for the task
         """
         return self.total_interval / self.frequency
+
 
 class FuncTimer(object):
     """
@@ -63,31 +65,15 @@ class FuncTimer(object):
         else:
             tasklist[self.task_name].increment(self.interval)
 
-
-    # def __enter__(self):
-    #     self.start_time = time.time()
-    #     return self
-
-    # def __exit__(self, exc_type, exc_val, exc_tb):
-    #     self.end_time = time.time()
-    #     self.interval = self.end_time - self.start_time
-    #     if self.task_name not in tasklist.keys():
-    #         tasklist[self.task_name] = FuncTask(self.task_name, self.interval)
-    #     else:
-    #         tasklist[self.task_name].increment(self.interval)
-
     @staticmethod
     def printStat():
         """
         Print the average runtime statistics
         """
-        print 'PERFORMANCE METRICS:'
-        print 60*'-'
-        print '*** Average Runtime ***'
-        print 'Task Name             \t Average Exec Time (s)      \t Number of Executions'
+        print('PERFORMANCE METRICS:')
+        print(60*'-')
+        print('*** Average Runtime ***')
+        print('Task Name             \t Average Exec Time (s)      \t Number of Executions')
         for k, v in tasklist.items():
-            print '{:40s} {:12.8f}  {:8d}'.format(k, v.getAverageTime(), v.frequency)
-        print 60*'-'
-
-
-
+            print('{:40s} {:12.8f}  {:8d}'.format(k, v.getAverageTime(), v.frequency))
+        print(60*'-')

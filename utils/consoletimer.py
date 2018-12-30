@@ -1,7 +1,11 @@
 from __future__ import with_statement
 import time
 
-class consoletimer(object):
+
+class ConsoleTimer(object):
+    """
+    Adds a console output to inform the user of ongoing operations.
+    """
 
     def __init__(self, taskname):
         self.taskname = taskname

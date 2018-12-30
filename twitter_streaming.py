@@ -1,16 +1,13 @@
 # From online tutorial: http://socialmedia-class.org/twittertutorial.html
 #---------------------------------------------------------------------------------------------------------------------
 # Import the necessary package to process data in JSON format
-try:
-    import json
-except ImportError:
-    import simplejson as json
+import json
 
 # Import the tweepy library
 import tweepy
 
 # Variables that contains the user credentials to access Twitter API 
-import utils.private_credentials as creds
+import credentials.private_credentials as creds
 
 # Setup tweepy to authenticate with Twitter credentials:
 
