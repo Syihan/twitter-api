@@ -1,0 +1,8 @@
+# exclude utils/private_credentials.py to prevent uploading sensitive information
+/utils/private_credentials.py
+
+# exclude VS Code setting folders
+/.vscode
+
+# exclude file types generated at runtime
+*.pyc
