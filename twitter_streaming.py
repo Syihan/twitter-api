@@ -7,7 +7,7 @@ import json
 import tweepy
 
 # Variables that contains the user credentials to access Twitter API 
-import credentials.private_credentials as creds
+import credentials as creds
 
 # Setup tweepy to authenticate with Twitter credentials:
 

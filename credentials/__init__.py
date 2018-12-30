@@ -1,1 +1,1 @@
-from utils.private_credentials import *
+from credentials.private_credentials import *

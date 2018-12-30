@@ -1,4 +1,4 @@
-# Exclude utils/private_credentials.py to prevent uploading sensitive information
+# Exclude credentials/private_credentials.py to prevent uploading sensitive information
 /credentials/private_credentials.py
 
 # Exclude folders and file types generated at runtime
